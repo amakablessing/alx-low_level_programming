@@ -1,10 +1,9 @@
 #include "main.h"
 
 /**
- * _puts_recursion - prints strings character recursively
- * @s: this takes the value of _puts_recursion
+ * _puts_recursion - prints a string
  *
- * Return (0);
+ * @s: pointer parameter
  */
 
 void _puts_recursion(char *s)
@@ -15,5 +14,6 @@ void _puts_recursion(char *s)
 		return;
 	}
 	_putchar(*s);
-	_puts_recursion(s + 1);
+	s++;
+	_puts_recursion(s);
 }
